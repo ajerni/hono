@@ -17,7 +17,7 @@ services:
     labels:
       - traefik.enable=true
       - traefik.docker.network=alnetwork
-      - traefik.http.routers.hono-demo.rule=Host(`hono.wineagent.ch`)
+      - traefik.http.routers.hono-demo.rule=Host(`hugo.winespirit.ch`)
       - traefik.http.routers.hono-demo.entrypoints=websecure
       - traefik.http.routers.hono-demo.tls=true
       - traefik.http.routers.hono-demo.tls.certresolver=lets-encrypt
