@@ -90,6 +90,10 @@ app.get('/', (c) => {
     fragments the server returns — no React, no build step for the frontend.
   </p>
 
+  <p class="muted">
+    Full code at: <a href="https://github.com/ajerni/hono" target="_blank">https://github.com/ajerni/hono</a>
+  </p>
+  
   <!-- ── Demo 1: Greet by name ─────────────────────────────────────────── -->
   <section>
     <h2>1. Greet me</h2>
