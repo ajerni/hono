@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  hono-demo:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: hono-demo
+    restart: always
+    ports:
+      - "8089:3001"
+    environment:
+      PORT: "3001"
+      NODE_ENV: production
+    networks:
+      - alnetwork
+    labels:
+      - traefik.enable=true
+      - traefik.docker.network=alnetwork
+      - traefik.http.routers.hono-demo.rule=Host(`hono.wineagent.com`)
+      - traefik.http.routers.hono-demo.entrypoints=websecure
+      - traefik.http.routers.hono-demo.tls=true
+      - traefik.http.routers.hono-demo.tls.certresolver=lets-encrypt
+      - traefik.http.services.hono-demo.loadbalancer.server.port=3001
+
+networks:
+  alnetwork:
+    external: true
