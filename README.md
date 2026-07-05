@@ -1,6 +1,6 @@
 # Hono + HTMX Example
 
-A small educational demo showing how [Hono](https://hono.dev) serves HTML fragments to a plain HTML frontend powered by [HTMX](https://htmx.org) — no React, no client-side framework.
+A small educational demo showing how [Hono](https://hono.dev) serves HTML fragments to a plain HTML frontend powered by [HTMX](https://htmx.org) — no React, no client-side framework. Currently runs live at: https://hono.wineagent.ch
 
 ## What it demonstrates
 
